@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>짝을찾아줘!</title>
+	<link rel="stylesheet" href="../MS/style.css">
+	<link rel="stylesheet" href="./twostyle.css">
+
+	<meta charset="utf-8">
+  <meta name="description" content="Matching Game">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://ryanwaite28.github.io/script-store/js/stop-watch.js"></script>
+  <script src="./app.js"></script>
+
+
+</head>
+
+	
+
+<body>
+<!--헤더 게임 이름 등 -->
+	<div id="Hheader" class="CHheader">
+
+		<div id="nameHeadertwo" class="nameHeaderW">
+			<div id="SNHtwoone" class="SNHright">
+				<!--짝을찾아줘!-->
+				<img class="headerSNGame" src="../mainimg/headerNT.png">
+			</div>
+			<div id="SNHtwotwo" class="SNHleft">
+				<!--같은그림찾기-->
+				<img class="headerNGame" src="../mainimg/headerNGT.png">
+			</div>
+		</div>
+	</div>
+	
+<!--메뉴바 & 로고 -->
+	<div id="Gametwoo" class="Cmenu">
+		<div id="Mainlogo">
+			<a href="../index.html">
+				<img id="logoHiname" src="../mainimg/logonamee.png">
+			</a>
+		</div>
+		
+		<div class="containermain">
+			<button id="B1page" class="mainButton">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+					<a href="../GameS1/Gameone.html">
+						<img class="menuFT" src="../mainimg/Wmenuone.png">
+					</a>
+			</button>
+
+			<button id="B2page" class="mainButton">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+					<a href="./Gametwo.html">
+						<img class="menuFT" src="../mainimg/Wmenutwo.png">
+					</a>
+			</button>
+
+			<button id="B3page" class="mainButton">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+					<a href="../GameS3/Gamethree.html">
+						<img class="menuFT" src="../mainimg/Wmenuthree.png">
+					</a>
+			</button>
+
+			<svg style="position: absolute; left:-100%;">
+				<defs>
+					<filter id='goo'>
+						<feGaussianBlur stdDeviation='10'/>
+							<feColorMatrix
+								values='0 0 0 0 0
+										0 0 0 0 0
+										0 0 0 0 0
+										0 0 0 100 -15'/>
+
+							<feBlend in='SourceGraphic'/>
+					</filter>
+				</defs>
+			</svg>
+		</div>
+	</div>
+
+
+<!--메인화면 -->
+
+<div class="Cmain">
+	<div class="middle-box">
+
+    <section class="score-panel">
+      <ul id="stars-list" class="stars">
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+      </ul>
+      <span id="grade" class="moves"></span>
+
+      <span style="margin: 0px 20px;">
+        <strong><span id="moves-text"></span></strong> 움직였어!
+      </span>
+
+      <span style="margin: 0px 20px;">
+        <strong><span id="time-text"></span></strong>
+      </span>
+
+      <span style="margin: 0px 20px;">
+        <strong><span id="msg-text"></span></strong>
+      </span>
+
+      <div id="info-btn" class="hint">
+        <span><i class="fa fa-info"></i></span>
+      </div>
+      <div id="reset-btn" class="restart">
+        <span><i class="fa fa-repeat"></i>다시하기</span>
+      </div>
+    </section>
+
+    <ul id="deck" class="deck" ></ul>
+  </div>
+
+  <!--  -->
+
+  <div id="game_modal" class="modal">
+    <div class="modal-content">
+      <h4>다 찾았다!!!!!</h4>
+      <h5>결과보기</h5>
+
+      <p><strong>시간:</strong> <span id="time_results"></span></p>
+      <p><strong>이동횟수:</strong> <span id="moves_results"></span></p>
+      <p><strong>점수:</strong> <span id="grade_results"></span></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">닫기</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="modal_reset_btn">다시하기</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--하단 -->
+		<div class="CFootertext">
+			<div id="CopyName" class="FooterText">
+				Copyright © 안녕!동물친구들
+			</div>
+
+			<div id="DesignName" class="FooterText">
+				Designed by Yoon
+			</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>생김새가달라?!</title>
+	<link rel="stylesheet" href="../MS/style.css">
+	<link rel="stylesheet" href="./threestyle.css">
+</head>
+
+	
+
+<body>
+<!--헤더 게임 이름 등 -->
+	<div id="Hheader" class="CHheader">
+
+		<div id="nameHeaderthree" class="nameHeaderW">
+			<div id="SNHthreeone" class="SNHright">
+				<!--생김새가달라?!-->
+				<img class="headerSNGame" src="../mainimg/headerNOTh.png">
+			</div>
+			<div id="SNHthreetwo" class="SNHleft">
+				<!--다른그림찾기-->
+				<img class="headerNGame" src="../mainimg/headerNGTh.png">
+			</div>
+		</div>
+	</div>
+	
+<!--메뉴바 & 로고 -->
+	<div id="menu" class="Cmenu">
+		<div id="Mainlogo">
+			<a href="../index.html">
+				<img id="logoHiname" src="../mainimg/logonamee.png">
+			</a>
+		</div>
+
+		<div class="containermain">
+			<button id="B1page" class="mainButton">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+					<a href="../GameS1/Gameone.html">
+						<img class="menuFT" src="../mainimg/Wmenuone.png">
+					</a>
+			</button>
+
+			<button id="B2page" class="mainButton">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+					<a href="../GameS2/Gametwo.html">
+						<img class="menuFT" src="../mainimg/Wmenutwo.png">
+					</a>
+			</button>
+
+			<button id="B3page" class="mainButton">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+					<a href="./Gamethree.html">
+						<img class="menuFT" src="../mainimg/Wmenuthree.png">
+					</a>
+			</button>
+
+			<svg style="position: absolute; left:-100%;">
+				<defs>
+					<filter id='goo'>
+						<feGaussianBlur stdDeviation='10'/>
+							<feColorMatrix
+								values='0 0 0 0 0
+										0 0 0 0 0
+										0 0 0 0 0
+										0 0 0 100 -15'/>
+
+							<feBlend in='SourceGraphic'/>
+					</filter>
+				</defs>
+			</svg>
+		</div>
+	</div>
+
+
+<!--메인화면 -->
+<div id="Gamesection3" class="Cmain">
+	<div id="Notify">
+		Items: <text id="score001">0</text><br />
+    	Attempts: <text id="attempts001">3</text><br /><br />
+	</div>
+
+    <div class="position001">
+        <div id="board001">
+            <button class="hide001" onclick="incorrect001()">
+                <img src="./three1IMG.png" style="width: 60%; position: absolute; transform: translate(-50%, 0%); top:0%;" >
+            </button>
+            <div class="block001">
+                <div id="disappear001">
+                    <button class="button001" onclick="correct001()"></button>
+                </div>
+            </div>
+            <div class="block002">
+                <div id="disappear002">
+                    <button class="button002" onclick="correct002()"></button>
+                </div>
+            </div>
+            <div class="block003">
+                <div id="disappear003">
+                    <button class="button003" onclick="correct003()"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <br />
+    <p id="message001"></p>
+    <p id="message002"></p>
+
+      <script>
+        var a = 0;
+        a++
+        var b = 3;
+        b--;
+
+        function correct001() {
+            disappear001.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
+            score001.innerHTML = a++;
+            if (a > 3) {
+                message001.innerHTML = "Congratulations. You won.";
+                message002.innerHTML = "<button class=blue001 onclick=repeat001()>Repeat</button>";
+                board001.innerHTML = "<img src=./three1IMG.png height= 800 />";
+            }
+        }
+
+        function correct002() {
+            disappear002.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
+            score001.innerHTML = a++;
+            if (a > 3) {
+                message001.innerHTML = "Congratulations. You won.";
+                message002.innerHTML = "<button class=blue001 onclick=repeat001()>Repeat</button>";
+                board001.innerHTML = "<img src=./three1IMG.png height= 800 />";
+            }
+        }
+
+        function correct003() {
+            disappear003.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
+            score001.innerHTML = a++;
+            if (a > 3) {
+                message001.innerHTML = "Congratulations. You won.";
+                message002.innerHTML = "<button class=blue001 onclick=repeat001()>Repeat</button>";
+                board001.innerHTML = "<img src=./three1IMG.png height= 800 />";
+            }
+        }
+
+//틀렸을때 이미지 우는표정으로바꾸기
+        function incorrect001() {
+            attempts001.innerHTML = b--;
+            if (b < 0) {
+                message001.innerHTML = "You lost.";
+                message002.innerHTML = "<button class=blue001 onclick=repeat001()>Repeat</button>";
+                attempts001.innerHTML = "0";
+                board001.innerHTML = "<img src=./three1IMG.png height= 400 />";
+            }
+        }
+
+        function repeat001() {
+            location.reload();
+        }
+    </script>
+
+<!--하단 -->
+		<div class="CFootertext">
+			<div id="CopyName" class="FooterText">
+				Copyright © 안녕!동물친구들
+			</div>
+
+			<div id="DesignName" class="FooterText">
+				Designed by Yoon
+			</div>
+		</div>
+</body>
+</html>

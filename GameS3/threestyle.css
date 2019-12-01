@@ -1,0 +1,74 @@
+
+
+
+        #Notify{
+            font-size: 1.3em;
+        }
+
+         .position001 {
+            position: relative;
+        }
+
+        .block001 {
+            position: absolute;
+            top: 28px;
+            left: 83px;
+        }
+
+        .block002 {
+            position: absolute;
+            top: 130px;
+            left: 90px;
+        }
+
+        .block003 {
+            position: absolute;
+            top: 240px;
+            left: 70px;
+        }
+
+        .button001 {
+            background-color: transparent;
+            border: 1px solid transparent;
+            width: 20px;
+            height: 10px;
+        }
+
+        .button002 {
+            background-color: transparent;
+            border: 1px solid transparent;
+            width: 50px;
+            height: 40px;
+        }
+
+        .button003 {
+            background-color: transparent;
+            border: 1px solid transparent;
+            width: 90px;
+            height: 30px;
+        }
+
+        .hide001 {
+            background-color: white;
+            border: 1px solid white;
+        }
+
+        #mark001 {
+            color: yellow;
+            font-size: 125%;
+        }
+
+        .blue001 {
+            background-color: blue;
+            border: none;
+            color: white;
+            padding: 7px 17px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 2px 2px;
+            border-radius: 9px;
+            cursor: pointer;
+            width: 178px;
+        }
